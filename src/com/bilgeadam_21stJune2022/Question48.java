@@ -34,8 +34,10 @@ public class Question48 {
 		// plaka_iller();
 		// plaka();
 		// plaka_yazdir("Ankara");
-		// String[] new_array = sesli_harf_silme();
-		// String[] new_array_B = number_B(new_array);
+		String[] new_array = sesli_harf_silme();
+		String[] new_array_B = number_B(new_array);
+		for (int i = 0; i < new_array_B.length; i++)
+			System.out.println(new_array_B[i]);
 		// shorten(new_array);
 		String[] new_array_capital = capital_a(iller);
 		for (int i = 0; i < new_array_capital.length; i++)
@@ -114,11 +116,10 @@ public class Question48 {
 		for (int i = 0; i < iller.length; i++) {
 			for (int j = 0; j < vowels.length; j++) {
 				if (iller[i].contains(vowels[j])) {
-					iller[i] = iller[i].replace(vowels[j], "");
-				}
-
+					new_iller[i] = iller[i].replace(vowels[j], "");
+				} else
+					new_iller[i] = iller[i];
 			}
-			new_iller[i] = iller[i];
 
 		}
 		return new_iller;
