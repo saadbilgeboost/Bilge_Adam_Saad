@@ -135,7 +135,7 @@ public class Question48 {
 	}
 
 	public static String[] number_B(String[] new_iller) {
-		String[] new_iller_B = new String[iller.length];
+		String[] new_iller_B = new String[new_iller.length];
 		int k = 1;
 		for (int i = 0; i < new_iller.length; i++) {
 			if (new_iller[i].startsWith("B")) {
