@@ -16,7 +16,7 @@ public class Question42 {
 		System.out.println("The greatest common factor of " + num1 + " and " + num2 + " is " + GCF(num1, num2));
 		System.out.println(
 				"The least common multiple of " + num1 + " and " + num2 + " is " + (num1 * num2) / GCF(num1, num2));
-
+		scanner.close();
 	}
 
 	public static int GCF(int num1, int num2) {
