@@ -19,7 +19,7 @@ public class Question12 {
 			check = false;
 
 		} else {
-			for (int i = 2; i < Math.sqrt(n); i++) {
+			for (int i = 2; i <= Math.sqrt(n); i++) {
 				if (n % i == 0) {
 					check = false;
 					break;
