@@ -2,7 +2,7 @@ package com.bilgeadam_27thJune2022.Question1;
 
 import java.util.Scanner;
 
-public class Runner {
+public class Runner1 {
 
 	public static void main(String[] args) {
 		// Question part (a)

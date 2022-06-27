@@ -1,6 +1,6 @@
 package com.bilgeadam_27thJune2022.Question3;
 
-public class Runner {
+public class Runner3 {
 
 	public static void main(String[] args) {
 
