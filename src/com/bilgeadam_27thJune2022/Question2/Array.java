@@ -1,8 +1,9 @@
 package com.bilgeadam_27thJune2022.Question2;
 
 public class Array {
+	static int[] num_array = new int[0];
 
-	public int[] add(int[] num_array, int num) {
+	public int[] add(int num) {
 		int[] temp = new int[num_array.length + 1];
 		for (int i = 0; i < num_array.length; i++) {
 			temp[i] = num_array[i];
@@ -12,7 +13,7 @@ public class Array {
 		return num_array;
 	}
 
-	public int[] erase(int[] num_array, int num) {
+	public int[] erase(int num) {
 		int index = -1;
 		for (int i = 0; i < num_array.length; i++) {
 			if (num_array[i] == num) {
@@ -32,7 +33,7 @@ public class Array {
 		return num_array;
 	}
 
-	public int[] add_inbetween(int[] num_array, int num, int index) {
+	public int[] add_inbetween(int num, int index) {
 		int[] temp = new int[num_array.length + 1];
 		for (int i = 0, j = 0; i < temp.length; i++, j++) {
 			if (index == i)
@@ -45,7 +46,7 @@ public class Array {
 		return num_array;
 	}
 
-	public void print_array(int[] num_array) {
+	public void print_array() {
 		for (int i = 0; i < num_array.length; i++) {
 			System.out.print(num_array[i] + ", ");
 		}

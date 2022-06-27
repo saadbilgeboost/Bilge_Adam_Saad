@@ -1,34 +1,28 @@
 package com.bilgeadam_27thJune2022.Question2;
 
-public class Runner {
+public class Runner2 {
 
 	public static void main(String[] args) {
-		int[] num_array = new int[0];
+
 		Array array = new Array();
-		num_array = array.add(num_array, 5);
+		int[] num_array = Array.num_array;
+		num_array = array.add(5);
+
 		System.out.println(num_array[0]);
-		num_array = array.add(num_array, 3);
-		System.out.println(num_array[0]);
-		System.out.println(num_array[1]);
-		num_array = array.erase(num_array, 5);
-		System.out.println(num_array[0]);
-		num_array = array.add(num_array, 34);
-		num_array = array.add(num_array, 48);
-		for (int i = 0; i < num_array.length; i++) {
-			System.out.print(num_array[i] + ", ");
-		}
+		num_array = array.add(3);
+		array.print_array();
+		num_array = array.erase(5);
+		array.print_array();
+		num_array = array.add(34);
+		num_array = array.add(48);
+		array.print_array();
+		num_array = array.add_inbetween(32, 2);
+		array.print_array();
 		System.out.println();
-		num_array = array.add_inbetween(num_array, 32, 2);
-		for (int i = 0; i < num_array.length; i++) {
-			System.out.print(num_array[i] + ", ");
-		}
+		num_array = array.erase(32);
+		array.print_array();
 		System.out.println();
-		num_array = array.erase(num_array, 32);
-		for (int i = 0; i < num_array.length; i++) {
-			System.out.print(num_array[i] + ", ");
-		}
-		System.out.println();
-		array.print_array(num_array);
+		array.print_array();
 	}
 
 }
