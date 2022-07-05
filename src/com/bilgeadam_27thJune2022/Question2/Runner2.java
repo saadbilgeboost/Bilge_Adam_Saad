@@ -19,7 +19,7 @@ public class Runner2 {
 		num_array = array.add(48);
 		array.print_array();
 
-		num_array = array.add_inbetween(32, 2);
+		num_array = array.add_inbetween(32, 0);
 		array.print_array();
 
 		num_array = array.erase(32);

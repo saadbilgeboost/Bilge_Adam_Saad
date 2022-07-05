@@ -20,15 +20,15 @@ public class Question42 {
 	}
 
 	public static int GCF(int num1, int num2) {
-		int mul = 1;
+		int gcf = 1;
 
-		for (int i = 1; i <= num2 && i <= num1; i++) {
+		for (int i = 1; i <= num1 && i <= num2; i++) {
 			if (num1 % i == 0 && num2 % i == 0) {
-				mul = i;
+				gcf = i;
 			}
 		}
 
-		return mul;
+		return gcf;
 
 	}
 }
