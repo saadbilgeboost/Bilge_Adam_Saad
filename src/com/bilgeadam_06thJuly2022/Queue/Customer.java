@@ -56,10 +56,21 @@ public class Customer implements Comparable<Customer> {
 //
 //	}
 	// when using customer.age the priority becomes 1 rather then -1.
+//	public int compareTo(Customer customer) {
+//		if (customer.age < 65) {
+//			return -1;
+//		} else if (customer.age > 65) {
+//			return 1;
+//		} else {
+//			return 0;
+//		}
+//
+//	}
+	// when using this.age the priority becomes -1.
 	public int compareTo(Customer customer) {
-		if (customer.age < 65) {
+		if (this.age < 65) {
 			return -1;
-		} else if (customer.age > 65) {
+		} else if (this.age > 65) {
 			return 1;
 		} else {
 			return 0;
