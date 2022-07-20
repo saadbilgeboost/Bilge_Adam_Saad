@@ -16,7 +16,7 @@ public class Homework {
 
 	public static void main(String[] args) {
 		int plate_guess = randomNumGenerator();
-		String city_guess = city(plate_guess).toLowerCase();
+		String city_guess = city(plate_guess);
 		int count = 0;
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("------------------------------------------------------");
@@ -25,9 +25,10 @@ public class Homework {
 		System.out.println();
 		do {
 			System.out.print("Guess the city for the following plate number <" + plate_guess + "> : ");
-			String guess = scanner.nextLine().toLowerCase();
-			if (guess.equals(city_guess)) {
-				System.out.println("You guessed it right.");
+			String guess = scanner.nextLine();
+			if (guess.equalsIgnoreCase(city_guess)) {
+				System.out.println(
+						"You guessed it right. " + plate_guess + " is the plate number of " + city_guess + ".");
 				count = 3;
 			} else {
 				count++;
