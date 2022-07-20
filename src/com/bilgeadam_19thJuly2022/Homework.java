@@ -26,11 +26,11 @@ public class Homework {
 		do {
 			System.out.print("Guess the city for the following plate number <" + plate_random + "> : ");
 			String city_guess = scanner.nextLine();
+			count++;
 			if (city_guess.equalsIgnoreCase(city)) {
-				System.out.println("You guessed it right. " + plate_random + " is the plate number of " + city + ".");
-				count = 3;
+				System.out.println("You guessed it right. " + plate_random + " is the plate number for" + city + ".");
+				break;
 			} else {
-				count++;
 				if (count < 3) {
 					System.out.println("Wrong Guess. Try again. (Remaining number of tries: " + (3 - count) + ")");
 				} else {
