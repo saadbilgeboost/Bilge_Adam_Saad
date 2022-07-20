@@ -15,8 +15,8 @@ import java.util.Scanner;
 public class Homework {
 
 	public static void main(String[] args) {
-		int plate_guess = randomNumGenerator();
-		String city_guess = city(plate_guess);
+		int plate_random = randomNumGenerator();
+		String city = city(plate_random);
 		int count = 0;
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("------------------------------------------------------");
@@ -24,23 +24,22 @@ public class Homework {
 		System.out.println("------------------------------------------------------");
 		System.out.println();
 		do {
-			System.out.print("Guess the city for the following plate number <" + plate_guess + "> : ");
-			String guess = scanner.nextLine();
-			if (guess.equalsIgnoreCase(city_guess)) {
-				System.out.println(
-						"You guessed it right. " + plate_guess + " is the plate number of " + city_guess + ".");
+			System.out.print("Guess the city for the following plate number <" + plate_random + "> : ");
+			String city_guess = scanner.nextLine();
+			if (city_guess.equalsIgnoreCase(city)) {
+				System.out.println("You guessed it right. " + plate_random + " is the plate number of " + city + ".");
 				count = 3;
 			} else {
 				count++;
 				if (count < 3) {
 					System.out.println("Wrong Guess. Try again. (Remaining number of tries: " + (3 - count) + ")");
 				} else {
-					System.out.println(
-							"You could not guess the city. The right answer was " + city_guess + ". You lost!!");
+					System.out.println("You could not guess the city. The right answer was " + city + ". You lost!!");
 				}
 
 			}
 		} while (count != 3);
+		System.out.println();
 		System.out.println("------------------------------------------------------");
 		System.out.println("-------------------END GAME--------------------");
 		System.out.println("------------------------------------------------------");
