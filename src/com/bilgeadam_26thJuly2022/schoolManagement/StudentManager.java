@@ -34,6 +34,20 @@ public class StudentManager {
 		return age;
 	}
 
+	public boolean ageControl(int age) {
+		if (age < 8) {
+			try {
+				throw new AgeException(
+						"Age of the student should be atleast 8. Therefore the student cannot be admitted.");
+			} catch (Exception e) {
+				System.err.println(e.getMessage());
+			}
+			return false;
+		} else {
+			return true;
+		}
+	}
+
 	public double grade() {
 		double grade = Utils.readDouble("Please enter the grade of the student: ");
 		grade = gradeControl(grade);
@@ -70,14 +84,8 @@ public class StudentManager {
 		String name = nameControl();
 		LocalDate date = dateofBirthControl();
 		int age = ageCalculator(date);
-		if (age < 8) {
-			try {
-				throw new AgeException(
-						"Age of the student should be atleast 8. Therefore the student cannot be admitted.");
-			} catch (Exception e) {
-				System.err.println(e.getMessage());
-			}
-
+		if (!ageControl(age)) {
+			System.out.println();
 			return createStudent();
 		} else {
 			Student student = new Student(name, date);
