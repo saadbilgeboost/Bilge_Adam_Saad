@@ -9,7 +9,7 @@ public class School {
 	public static void main(String[] args) {
 		StudentManager studentManager = new StudentManager();
 		Student student1, student2, student3;
-
+		printList();
 		student1 = studentManager.createStudent();
 		studentList.add(student1);
 
