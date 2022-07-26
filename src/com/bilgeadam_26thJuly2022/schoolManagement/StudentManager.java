@@ -29,8 +29,8 @@ public class StudentManager {
 		return date_of_birth;
 	}
 
-	public int ageCalculator() {
-		int age = (int) dateofBirthControl().until(LocalDate.now(), ChronoUnit.YEARS);
+	public int ageCalculator(LocalDate date_of_birth) {
+		int age = (int) date_of_birth.until(LocalDate.now(), ChronoUnit.YEARS);
 		return age;
 	}
 
@@ -69,13 +69,15 @@ public class StudentManager {
 	public Student createStudent() {
 		String name = nameControl();
 		LocalDate date = dateofBirthControl();
-		int age = ageCalculator();
+		int age = ageCalculator(date);
 		if (age < 8) {
 			try {
-				throw new AgeException("Age of the student should be atleast 8.");
+				throw new AgeException(
+						"Age of the student should be atleast 8. Therefore the student cannot be admitted.");
 			} catch (Exception e) {
 				System.err.println(e.getMessage());
 			}
+
 			return createStudent();
 		} else {
 			Student student = new Student(name, date);

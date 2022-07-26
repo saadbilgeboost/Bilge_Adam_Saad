@@ -14,7 +14,6 @@ public class Utils {
 		do {
 			System.out.print(query);
 			try {
-
 				value = scanner.nextLine();
 				date = LocalDate.parse(value);
 				control = false;
