@@ -80,18 +80,4 @@ public class StudentManager {
 		return grades;
 	}
 
-	public Student createStudent() {
-		String name = nameControl();
-		LocalDate date = dateofBirthControl();
-		int age = ageCalculator(date);
-		if (!ageControl(age)) {
-			System.out.println();
-			return createStudent();
-		} else {
-			Student student = new Student(name, date);
-			student.grades = arrayGrade();
-			return student;
-		}
-
-	}
 }
