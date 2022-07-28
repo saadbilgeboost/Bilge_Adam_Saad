@@ -15,6 +15,10 @@ import java.util.Scanner;
 public class Homework {
 
 	public static void main(String[] args) {
+		guess_game();
+	}
+
+	public static void guess_game() {
 		int plate_random = randomNumGenerator();
 		String city = city(plate_random);
 		int count = 0;
@@ -22,8 +26,9 @@ public class Homework {
 		System.out.println("------------------------------------------------------");
 		System.out.println("------------------START GAME------------------");
 		System.out.println("------------------------------------------------------");
-		System.out.println();
+
 		do {
+			System.out.println();
 			System.out.print("Guess the city for the following plate number <" + plate_random + "> : ");
 			String city_guess = scanner.nextLine();
 			count++;
