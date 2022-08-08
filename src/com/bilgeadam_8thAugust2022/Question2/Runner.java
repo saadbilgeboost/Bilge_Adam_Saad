@@ -24,6 +24,7 @@ public class Runner {
 		for (int i : num_array) {
 			System.out.print(i + ", ");
 		}
+		System.out.println();
 
 	}
 
