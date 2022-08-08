@@ -20,6 +20,7 @@ public class Runner {
 
 		num_array = array.remove(75);
 		num_array = array.array();
+
 		for (int i : num_array) {
 			System.out.print(i + ", ");
 		}
