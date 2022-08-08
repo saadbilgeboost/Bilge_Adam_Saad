@@ -1,13 +1,14 @@
 package com.bilgeadam_8thAugust2022.Question4;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
 public class Rent implements ILibrary {
 
-	List<Book> library;
-	List<Customer> customers = new LinkedList<Customer>();
-	List<Book> rentedBooks = new LinkedList<Book>();
+	public List<Book> library;
+	public List<Customer> customers = new LinkedList<Customer>();
+	public List<Book> rentedBooks = new ArrayList<Book>();
 
 	@Override
 	public boolean findBook(String id) {
@@ -46,6 +47,7 @@ public class Rent implements ILibrary {
 		if (findBook(book.id)) {
 			if (availability(book.id)) {
 				book.customersRented.add(customer);
+				customer.booksRented.add(book);
 				rentedBooks.add(book);
 				return true;
 			}

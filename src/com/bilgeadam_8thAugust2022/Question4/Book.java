@@ -1,13 +1,13 @@
 package com.bilgeadam_8thAugust2022.Question4;
 
-import java.util.Stack;
+import java.util.List;
 import java.util.UUID;
 
 public class Book {
 	String id;
 	String title;
 	String author;
-	public Stack<Customer> customersRented = new Stack<Customer>();
+	public List<Customer> customersRented;
 
 	public Book(String title, String author) {
 		this.id = UUID.randomUUID().toString();
@@ -33,6 +33,14 @@ public class Book {
 
 	public String getId() {
 		return id;
+	}
+
+	public List<Customer> getCustomersRented() {
+		return customersRented;
+	}
+
+	public void setCustomersRented(List<Customer> customersRented) {
+		this.customersRented = customersRented;
 	}
 
 	@Override
