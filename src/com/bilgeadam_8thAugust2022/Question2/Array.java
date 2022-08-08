@@ -1,10 +1,12 @@
 package com.bilgeadam_8thAugust2022.Question2;
 
 public class Array {
-	public static int[] num_array = new int[0];
+	public int[] num_array = new int[0];
+	private int size = 0;
 
 	public int[] add(int num) {
-		int[] temp = new int[num_array.length + 1];
+		size++;
+		int[] temp = new int[size];
 		for (int i = 0; i < num_array.length; i++) {
 			temp[i] = num_array[i];
 		}
@@ -13,16 +15,17 @@ public class Array {
 		return num_array;
 	}
 
-	public int[] erase(int num) {
+	public int[] remove(int num) {
 		int index = -1;
-		for (int i = 0; i < num_array.length; i++) {
+		for (int i = 0; i < size; i++) {
 			if (num_array[i] == num) {
 				index = i;
+				size--;
 				break;
 			}
 		}
 
-		int[] temp = new int[num_array.length - 1];
+		int[] temp = new int[size];
 		for (int i = 0, j = 0; i < num_array.length; i++, j++) {
 			if (index == i)
 				i++;
@@ -31,11 +34,13 @@ public class Array {
 		}
 		num_array = temp;
 		return num_array;
+
 	}
 
-	public int[] add_inbetween(int num, int index) {
-		int[] temp = new int[num_array.length + 1];
-		for (int i = 0, j = 0; i < temp.length; i++, j++) {
+	public int[] add(int num, int index) {
+		size++;
+		int[] temp = new int[size];
+		for (int i = 0, j = 0; i < size; i++, j++) {
 			if (index == i)
 				i++;
 			temp[i] = num_array[j];
@@ -44,12 +49,10 @@ public class Array {
 		temp[index] = num;
 		num_array = temp;
 		return num_array;
+
 	}
 
-	public void print_array() {
-		for (int i = 0; i < num_array.length; i++) {
-			System.out.print(num_array[i] + ", ");
-		}
-		System.out.println();
+	public int[] array() {
+		return num_array;
 	}
 }

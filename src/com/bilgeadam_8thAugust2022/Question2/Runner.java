@@ -5,25 +5,24 @@ public class Runner {
 	public static void main(String[] args) {
 
 		Array array = new Array();
-		int[] num_array = Array.num_array;
+		int[] num_array = array.num_array;
 		num_array = array.add(5);
 		System.out.println(num_array[0]);
 
 		num_array = array.add(3);
-		array.print_array();
 
-		num_array = array.erase(5);
-		array.print_array();
+		num_array = array.remove(5);
 
 		num_array = array.add(34);
 		num_array = array.add(48);
-		array.print_array();
 
-		num_array = array.add_inbetween(32, 2);
-		array.print_array();
+		num_array = array.add(32, 2);
 
-		num_array = array.erase(32);
-		array.print_array();
+		num_array = array.remove(75);
+		num_array = array.array();
+		for (int i : num_array) {
+			System.out.print(i + ", ");
+		}
 
 	}
 
