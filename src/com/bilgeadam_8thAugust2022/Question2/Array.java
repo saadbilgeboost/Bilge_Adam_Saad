@@ -7,7 +7,7 @@ public class Array {
 	public int[] add(int num) {
 		size++;
 		int[] temp = new int[size];
-		for (int i = 0; i < num_array.length; i++) {
+		for (int i = 0; i < size - 1; i++) {
 			temp[i] = num_array[i];
 		}
 		temp[size - 1] = num;
