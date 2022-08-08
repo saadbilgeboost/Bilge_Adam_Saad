@@ -10,7 +10,7 @@ public class Array {
 		for (int i = 0; i < num_array.length; i++) {
 			temp[i] = num_array[i];
 		}
-		temp[num_array.length] = num;
+		temp[size - 1] = num;
 		num_array = temp;
 		return num_array;
 	}
