@@ -9,10 +9,10 @@ public class Book {
 	String author;
 	public Stack<Customer> customersRented = new Stack<Customer>();
 
-	public Book(String title, String writer) {
+	public Book(String title, String author) {
 		this.id = UUID.randomUUID().toString();
 		this.title = title;
-		this.author = writer;
+		this.author = author;
 	}
 
 	public String getTitle() {
@@ -37,7 +37,7 @@ public class Book {
 
 	@Override
 	public String toString() {
-		return "Book [id=" + id + ", title=" + title + ", writer=" + author + ", customersRented=" + customersRented
+		return "Book [id=" + id + ", title=" + title + ", author=" + author + ", customersRented=" + customersRented
 				+ "]";
 	}
 
